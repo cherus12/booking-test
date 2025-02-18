@@ -23,7 +23,7 @@ const List = () => {
 		const fetch = async () => {
 			try {
 				const res = await axios.get(
-					`http://localhost:8800/hotels?city=${destination}`
+					`https://booking-test-server.onrender.com/hotels?city=${destination}`
 				)
 				setData(res.data)
 			} catch (err) {
