@@ -26,7 +26,9 @@ const Reserve = ({
 
 	useEffect(() => {
 		const fetch = async () => {
-			const res = await axios.get(`http://localhost:8800/hotels/${item._id}`)
+			const res = await axios.get(
+				`https://booking-test-server.onrender.com/hotels/${item._id}`
+			)
 			setData(res.data)
 		}
 
@@ -42,7 +44,7 @@ const Reserve = ({
 	}
 
 	const handleClick = async () => {
-		await axios.put(`http://localhost:8800/rooms/reserve`, {
+		await axios.put(`https://booking-test-server.onrender.com/rooms/reserve`, {
 			date: allDates,
 			checked,
 		})
